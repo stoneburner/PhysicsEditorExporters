@@ -1,0 +1,113 @@
+<exporter>
+    <!-- identifier of the exporter -->
+	<name>spritekit</name>
+
+	<!-- display name of the exporter for the combo box -->
+	<displayName>SpriteKit Swift Exporter</displayName>
+
+	<!-- description of the exporter -->
+	<description>This exporter creates a Swift file</description>
+
+    <!-- exporter version -->
+	<version>1.0</version>
+
+	<!-- direction of the y-axis up / down -->
+    <yAxisDirection>up</yAxisDirection>
+
+    <!-- physics engine: box2d / chipmunk -->
+	<physicsEngine>box2d</physicsEngine>
+
+	<!-- name of the template -->
+	<template>spritekit.swift</template>
+
+	<!-- file extension for the file to create -->
+	<fileExtension>swift</fileExtension>
+
+	<!-- anchorpoint -->
+	<!--
+	<anchorPoint>
+		<enabled>yes</enabled>
+		<relX>0.5</relX>
+		<relY>0.5</relY>
+	</anchorPoint>
+-->
+	<!-- origin of the coordinate system -->
+    <origin>
+        <!-- may be: anchorPoint or fixed -->
+        <type>fixed</type>
+    </origin>
+
+	<global>
+
+	</global>
+
+	<body>
+		<parameter>
+			<name>scale_factor</name>
+			<displayName>Scale Factor</displayName>
+			<type>float</type>
+			<default>1</default>
+		</parameter>
+					<parameter>
+					<name>is_dynamic</name>
+					<displayName>Is Dynamic</displayName>
+					<description>A Boolean value that indicates whether the physics body is moved by the physics simulation.</description>
+					<type>bool</type>
+					<default>false</default>
+		</parameter>
+		<parameter>
+					<name>affected_by_gravity</name>
+					<displayName>Affected by gravity</displayName>
+					<description>Affected by gravity flag.</description>
+					<type>bool</type>
+					<default>true</default>
+	  </parameter>
+	  <parameter>
+					<name>allows_rotation</name>
+					<displayName>Allows rotation</displayName>
+					<description>Allow body rotation flag.</description>
+					<type>bool</type>
+					<default>true</default>
+	  </parameter>
+		<parameter>
+			<name>friction</name>
+			<displayName>Friction</displayName>
+			<type>float</type>
+			<min>0</min>
+			<max>1</max>
+			<default>0.2</default>
+			<description>The friction property determines the roughness of the body’s surface. It is used to calculate the frictional force that a body applies to other bodies moving along its surface.</description>
+	  </parameter>
+
+		<parameter>
+					<name>linear_damping</name>
+					<displayName>linear Damping</displayName>
+					<description>Property that reduces the body’s linear velocity.</description>
+					<type>float</type>
+					<min>0</min>
+					<max>1</max>
+					<default>0.1</default>
+		</parameter>
+
+		<parameter>
+					<name>angular_damping</name>
+					<displayName>Angular Damping</displayName>
+					<description>This property is used to simulate fluid or air friction forces on the body. The property must be a value between 0.0 and 1.0. The default value is 0.1. If the value is 0.0, no angular damping is applied to the object.</description>
+					<type>float</type>
+					<min>0</min>
+					<max>1</max>
+					<default>0.1</default>
+	  </parameter>
+
+		<parameter>
+					<name>This property is used to determine how much energy the physics body loses when it bounces off another object. The property must be a value between 0.0 and 1.0. The default value is 0.2</name>
+					<displayName>Resitution</displayName>
+					<description>This property is used to determine how much energy the physics body loses when it bounces off another object. The property must be a value between 0.0 and 1.0. The default value is 0.2</description>
+					<type>float</type>
+					<min>0</min>
+					<max>1</max>
+					<default>0.2</default>
+		</parameter>
+	</body>
+
+</exporter>
